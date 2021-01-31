@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_intermediate/MyAnimatedContainer.dart';
 
-import 'MyAnimatedContainer.dart';
+import 'MyAnimatedOpacity.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,11 +15,45 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             primarySwatch: Colors.blue,
         ),
-        home: HelloPage('Hello World')
+        home: Scaffold(
+          appBar: AppBar(
+            title : Text('Flutter Tutorial'),
+          ),
+          body: Home(),
+        )
     );
   }
 }
 
+class Home extends StatefulWidget {
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: <Widget>[
+        ListTile(
+          title : Text('AnimatedContainer'),
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => MyAnimatedContainer()));
+          },
+        ),
+        ListTile(
+          title : Text('AnimatedOpacity'),
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => MyAnimatedOpacity()));
+          },
+        )
+      ],
+    );
+  }
+}
+
+
+/*
 class HelloPage extends StatefulWidget {
   final String title;
   HelloPage(this.title);
@@ -49,7 +84,7 @@ class _HelloPageState extends State<HelloPage> {
           RaisedButton(
             child: Text('화면이동'),
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => MyAnimatedContainer()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => MyAnimatedOpacity()));
             },
           )
         ],
@@ -57,3 +92,4 @@ class _HelloPageState extends State<HelloPage> {
     );
   }
 }
+ */

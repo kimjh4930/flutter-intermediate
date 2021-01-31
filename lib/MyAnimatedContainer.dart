@@ -13,8 +13,6 @@ class _MyAnimatedContainerState extends State<MyAnimatedContainer> {
   Color _color = Colors.green;
   BorderRadius _borderRadius = BorderRadius.circular(8);
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
