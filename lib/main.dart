@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_intermediate/MyAnimatedContainer.dart';
+import 'package:flutter_intermediate/src/MyAnimatedContainer.dart';
+import 'package:flutter_intermediate/src/MyDrawer.dart';
 
-import 'MyAnimatedOpacity.dart';
+import 'src/MyAnimatedOpacity.dart';
 
 void main() {
   runApp(MyApp());
@@ -45,6 +46,12 @@ class _HomeState extends State<Home> {
           title : Text('AnimatedOpacity'),
           onTap: (){
             Navigator.push(context, MaterialPageRoute(builder: (context) => MyAnimatedOpacity()));
+          },
+        ),
+        ListTile(
+          title : Text('Drawer'),
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => MyDrawer()));
           },
         )
       ],
