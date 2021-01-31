@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_intermediate/src/MyAnimatedContainer.dart';
 import 'package:flutter_intermediate/src/MyDrawer.dart';
+import 'package:flutter_intermediate/src/MySnackBar.dart';
 
 import 'src/MyAnimatedOpacity.dart';
 
@@ -53,50 +54,14 @@ class _HomeState extends State<Home> {
           onTap: (){
             Navigator.push(context, MaterialPageRoute(builder: (context) => MyDrawer()));
           },
+        ),
+        ListTile(
+          title : Text('SnackBar'),
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => MySnackBar()));
+          },
         )
       ],
     );
   }
 }
-
-
-/*
-class HelloPage extends StatefulWidget {
-  final String title;
-  HelloPage(this.title);
-
-  @override
-  _HelloPageState createState() => _HelloPageState();
-}
-
-class _HelloPageState extends State<HelloPage> {
-  String _message = 'Hello World';
-  int _counter = 0;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        // onPressed: ,
-      ),
-      appBar: AppBar(
-        title:Text(widget.title)
-      ),
-      body: Center(child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(_message, style: TextStyle(fontSize: 30)),
-          Text('$_counter', style: TextStyle(fontSize: 30)),
-          RaisedButton(
-            child: Text('화면이동'),
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => MyAnimatedOpacity()));
-            },
-          )
-        ],
-      )),
-    );
-  }
-}
- */
