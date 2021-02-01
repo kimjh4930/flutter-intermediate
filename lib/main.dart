@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_intermediate/src/MyAnimatedContainer.dart';
 import 'package:flutter_intermediate/src/MyDrawer.dart';
+import 'package:flutter_intermediate/src/MyFormValidation.dart';
 import 'package:flutter_intermediate/src/MyOrientation.dart';
 import 'package:flutter_intermediate/src/MySnackBar.dart';
 import 'package:flutter_intermediate/src/MyTabController.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo App',
         theme: ThemeData(
-            primarySwatch: Colors.yellow
+            primarySwatch: Colors.blue
         ),
         home: Scaffold(
           appBar: AppBar(
@@ -73,6 +74,12 @@ class _HomeState extends State<Home> {
           title: Text('TabController'),
           onTap: (){
             Navigator.push(context, MaterialPageRoute(builder: (context) => MyTabController()));
+          },
+        ),
+        ListTile(
+          title: Text('FormValidation'),
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => MyFormValidation()));
           },
         )
       ],
